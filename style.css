@@ -164,7 +164,7 @@ section{
 #profile {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 6rem;
     height: 80vh;
 }
 
@@ -269,8 +269,8 @@ section{
 
 .about-containers{
     gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 40rem;
 }
 
 .about-details-container {
@@ -317,6 +317,7 @@ section{
 /* EXPERIENCE SECTION */
 
 #experience {
+    margin-top: 25rem;
     position: relative;
 }
 
@@ -325,9 +326,11 @@ section{
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    
 }
 
 .experience-details-container {
+    margin-top: -32rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -383,6 +386,7 @@ article.icon {
 /* CONTACT */
 
 #contact {
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -430,3 +434,4 @@ footer {
 footer p {
     text-align: center;
 }
+
