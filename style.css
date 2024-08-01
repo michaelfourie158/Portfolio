@@ -180,7 +180,8 @@ section{
     text-align: center;
 }
 
-.section__text_p{
+.section__text_p1{
+    margin-top: -5rem;
     font-weight: 600;
 }
 
@@ -317,7 +318,6 @@ section{
 /* EXPERIENCE SECTION */
 
 #experience {
-    margin-top: 25rem;
     position: relative;
 }
 
@@ -359,6 +359,7 @@ article.icon {
 /* PROJECTS SECTION */
 
 #projects {
+    margin-top: 3rem;
     position: relative;
 }
 
