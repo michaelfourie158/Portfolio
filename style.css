@@ -271,7 +271,7 @@ section{
 .about-containers{
     gap: 2rem;
     margin-bottom: 4rem;
-    margin-top: 40rem;
+    margin-top: 30rem;
 }
 
 .about-details-container {
@@ -318,7 +318,7 @@ section{
 /* EXPERIENCE SECTION */
 
 #experience {
-    margin-top: 25rem;
+    margin-top: 35rem;
     position: relative;
 }
 
@@ -331,7 +331,7 @@ section{
 }
 
 .experience-details-container {
-    margin-top: -32rem;
+    margin-top: -25rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
