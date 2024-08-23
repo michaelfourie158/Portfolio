@@ -6,6 +6,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 body{
@@ -153,10 +154,12 @@ section{
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    height: fit-content;
 }
 
 .section-container{
     display: flex;
+    height: fit-content;
 }
 
 /* PROFILE SECTION */
@@ -271,7 +274,7 @@ section{
 .about-containers{
     gap: 2rem;
     margin-bottom: 4rem;
-    margin-top: 30rem;
+    margin-top: 6rem;
 }
 
 .about-details-container {
@@ -318,7 +321,7 @@ section{
 /* EXPERIENCE SECTION */
 
 #experience {
-    margin-top: 35rem;
+    margin-top: 5rem;
     position: relative;
 }
 
@@ -331,7 +334,7 @@ section{
 }
 
 .experience-details-container {
-    margin-top: -25rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -360,7 +363,7 @@ article.icon {
 /* PROJECTS SECTION */
 
 #projects {
-    margin-top: 3rem;
+    margin-top: 5rem;
     position: relative;
 }
 
