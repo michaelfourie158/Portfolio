@@ -94,7 +94,7 @@
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     .about-containers {
         flex-direction: column;
     }
