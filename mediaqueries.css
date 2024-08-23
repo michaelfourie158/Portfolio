@@ -1,7 +1,8 @@
 @media screen and (max-width: 1400px){
     #profile {
         height: 83vh;
-        margin-bottom: 6rem;
+        margin-bottom: 10rem;
+        height: fit-content;
     }
     .about-containers {
         flex-wrap: wrap;
@@ -40,6 +41,11 @@
     }
     .about-containers {
         margin-top: 0;
+    }
+    .about-pic{
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
     }
 }
 
@@ -91,6 +97,11 @@
     }
     .text_container {
         text-align: justify;
+    }
+    .about-pic{
+        width: auto;
+        height: 46vw;
+        justify-content: center;
     }
 }
 

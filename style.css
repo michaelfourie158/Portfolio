@@ -154,7 +154,7 @@ section{
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
-    height: fit-content;
+
 }
 
 .section-container{
@@ -165,10 +165,14 @@ section{
 /* PROFILE SECTION */
 
 #profile {
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
     gap: 6rem;
     height: 80vh;
+    margin-bottom: 20rem;
+    height: fit-content;
+    
 }
 
 .section__pic-container{
@@ -184,7 +188,6 @@ section{
 }
 
 .section__text_p1{
-    margin-top: -5rem;
     font-weight: 600;
 }
 
@@ -269,12 +272,13 @@ section{
 
 #about {
     position: relative;
+    height: fit-content;
 }
 
 .about-containers{
     gap: 2rem;
     margin-bottom: 4rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .about-details-container {
@@ -289,7 +293,8 @@ section{
 
 .about-pic {
     border-radius: 2rem;
-    
+    margin-top: 10%;
+    width: 400px;
 }
 
 .arrow {
@@ -335,7 +340,6 @@ section{
 }
 
 .experience-details-container {
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
