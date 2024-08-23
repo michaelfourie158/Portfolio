@@ -98,17 +98,14 @@
     .text_container {
         text-align: justify;
     }
-    .about-pic{
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
+
 }
 
 @media screen and (max-width: 500px) {
     .about-containers {
         flex-direction: column;
     }
+
 }
 
 
