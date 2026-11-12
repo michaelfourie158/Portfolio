@@ -15,6 +15,11 @@
     />
     <meta name="theme-color" content="#0b1118" />
     <meta name="author" content="Michael Fourie" />
+    <meta property="og:title" content="Michael Fourie | Software Engineer" />
+    <meta property="og:description" content="Junior Software Engineer at Digiata, Cape Town. Projects, experience and skills." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://michaelfourie.co.za/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link
       rel="apple-touch-icon"
@@ -48,16 +53,19 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><button class="kbd-btn" id="open-palette" aria-label="Open quick jump menu">Jump to <kbd>/</kbd></button></li>
           <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <section id="profile" class="hero container">
+      <div class="glow" aria-hidden="true"></div>
       <div class="hero-text">
         <p class="eyebrow">Hello, I'm</p>
         <h1>Michael <em>Fourie</em></h1>
         <p class="role">Junior Software Engineer @ Digiata</p>
+        <p class="typed-line">I build <span id="typed" aria-live="off"></span><span class="caret" aria-hidden="true"></span></p>
         <p class="lead">Software engineer in Cape Town building financial software. BSc Information Technology graduate who loves solving problems and building things for the web.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="./assets/Michael-Fourie-CV.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -77,20 +85,26 @@
         <img class="about-pic" src="./assets/about-pic.png" alt="Michael Fourie" loading="lazy" />
         <p>I'm a Junior Software Engineer at Digiata in Cape Town, delivering and maintaining financial software solutions for ManCos, LISPs and Group Asset Managers. I graduated with a BSc in Information Technology from North-West University and have a passion for technology and the advancements being made in it. I like solving problems, and I've worked both solo and in teams on a wide range of projects.</p>
       </div>
+      <div class="stats reveal" aria-label="Testing highlights">
+        <div><b data-count="45">0</b><span>test cycles completed</span></div>
+        <div><b data-count="34">0</b><span>issues reported</span></div>
+        <div><b data-count="20">0</b><span>companies tested for</span></div>
+        <div><b data-count="3">0</b><span>Fortune 500 clients</span></div>
+      </div>
       <div class="two-col">
         <div class="panel reveal">
           <h3>Experience</h3>
-          <h4>Digiata: Junior Software Engineer <small>Jan 2025 – Present</small></h4>
-          <p class="meta">Cape Town · Employed by Digiata</p>
-          <ul><li>Delivering and maintaining financial software for ManCos, LISPs and Group Asset Managers: money management, trade order processing, pricing &amp; income distribution, cash reconciliation, general ledger integration and regulatory reporting.</li><li>Implementing automated ETL pipelines for SQL Server and Oracle data, aligned to functional design specifications.</li><li>Working with Business Analysts, Project Leads and IT teams to turn requirements into reliable solutions.</li><li>Designing UML process diagrams in Microsoft Visio and draw.io; running system reviews; unit, integration and regression testing.</li></ul>
-          <p class="meta">Client engagements as a Digiata contractor:</p>
-          <ul><li><strong>Allan Gray</strong>: Software Engineer, Aug 2025 – Present (Cape Town)</li><li><strong>Intembeko Investment Administrators</strong>: Software Engineer, Mar 2025 – Jul 2025 (Cape Town)</li></ul>
-          <h4>North-West University: Student Assistant <small>Feb 2024 – Nov 2024</small></h4>
-          <ul><li>CMPG 222 (Data Analytics), CMPG 121 (C++ Structured Programming) and CMPG 214 (IT Communication Skills)</li><li>Marking tests and assignments, invigilating, assisting students and lecturers</li></ul>
-          <h4>uTest: Functional Tester <small>Dec 2023 – Nov 2024</small></h4>
-          <ul><li>Tested mobile, web, desktop and Android TV applications as a Bronze-rated tester.</li><li>45 test cycles, 22 test cases and 34 issues reported for 20 companies, including 3 Fortune 500 companies and a leading motorsports organisation.</li><li>Won "Academy Tester of the Week" (22 January 2024).</li></ul>
-          <h4>Innibos Ticket Sales <small>2023 &amp; 2024</small></h4>
-          <ul><li>On-site ticket sales at the 3-day Innibos festival using Computicket (2023) and TicketPro (2024).</li></ul>
+          <ol class="timeline">
+            <li><span class="when">Jan 2025 – Present</span><h4>Junior Software Engineer, Digiata</h4><p class="meta">Cape Town · Employed by Digiata</p>
+              <ul><li>Financial software for ManCos, LISPs and Group Asset Managers: money management, trade order processing, pricing &amp; income distribution, cash reconciliation, general ledger integration and regulatory reporting.</li><li>Automated ETL pipelines for SQL Server and Oracle data, aligned to functional design specifications.</li><li>Turning requirements from Business Analysts, Project Leads and IT teams into reliable solutions.</li><li>UML process diagrams in Visio and draw.io; system reviews; unit, integration and regression testing.</li></ul>
+              <div class="sub"><p class="meta">Client engagements as a Digiata contractor</p><ul><li><strong>Allan Gray</strong>: Software Engineer, Aug 2025 – Present</li><li><strong>Intembeko Investment Administrators</strong>: Software Engineer, Mar 2025 – Jul 2025</li></ul></div></li>
+            <li><span class="when">Feb 2024 – Nov 2024</span><h4>Student Assistant, North-West University</h4>
+              <ul><li>CMPG 222 (Data Analytics), CMPG 121 (C++ Structured Programming) and CMPG 214 (IT Communication Skills)</li><li>Marking tests and assignments, invigilating, assisting students and lecturers</li></ul></li>
+            <li><span class="when">Dec 2023 – Nov 2024</span><h4>Functional Tester, uTest</h4>
+              <ul><li>Tested mobile, web, desktop and Android TV applications as a Bronze-rated tester.</li><li>Won "Academy Tester of the Week" (22 January 2024).</li></ul></li>
+            <li><span class="when">2023 &amp; 2024</span><h4>Innibos Ticket Sales</h4>
+              <ul><li>On-site sales at the 3-day Innibos festival using Computicket (2023) and TicketPro (2024).</li></ul></li>
+          </ol>
           <p class="note">See my full history on <a href="https://www.linkedin.com/in/michaelfourie158/" target="_blank" rel="noopener">LinkedIn</a>.</p>
         </div>
         <div class="panel reveal">
@@ -110,8 +124,8 @@
       <div class="container">
         <div class="section-head reveal"><p class="eyebrow">Explore my</p><h2>Skills</h2></div>
         <div class="two-col">
-          <div class="panel reveal"><h3>Technical Skills</h3><ul class="skills"><li><strong>HTML</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>JavaScript</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>CSS</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>C#</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>C++</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>Java</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>React</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>Python</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>SQL Server &amp; Oracle (ETL)</strong><span class="lvl">Professional</span></li><li><strong>UML (Visio, draw.io)</strong><span class="lvl">Professional</span></li><li><strong>Software Testing</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>MS Office</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Github</strong><span class="lvl lvl-intermediate">Intermediate</span></li></ul></div>
-          <div class="panel reveal"><h3>Personal Skills</h3><ul class="skills"><li><strong>Problem Solving</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Quick Learner</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Communication</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Teamwork</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Adaptability</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Accounting</strong><span class="lvl lvl-basic">Basic</span></li></ul></div>
+          <div class="panel reveal"><h3>Technical Skills</h3><ul class="skills"><li><strong>HTML</strong><span class="lvl lvl-intermediate">Intermediate</span><i class="bar" style="--w:65%"></i></li><li><strong>JavaScript</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li><li><strong>CSS</strong><span class="lvl lvl-intermediate">Intermediate</span><i class="bar" style="--w:65%"></i></li><li><strong>C#</strong><span class="lvl lvl-intermediate">Intermediate</span><i class="bar" style="--w:65%"></i></li><li><strong>C++</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li><li><strong>Java</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li><li><strong>React</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li><li><strong>Python</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li><li><strong>SQL Server &amp; Oracle (ETL)</strong><span class="lvl lvl-professional">Professional</span><i class="bar" style="--w:80%"></i></li><li><strong>UML (Visio, draw.io)</strong><span class="lvl lvl-professional">Professional</span><i class="bar" style="--w:80%"></i></li><li><strong>Software Testing</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>MS Office</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Github</strong><span class="lvl lvl-intermediate">Intermediate</span><i class="bar" style="--w:65%"></i></li></ul></div>
+          <div class="panel reveal"><h3>Personal Skills</h3><ul class="skills"><li><strong>Problem Solving</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Quick Learner</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Communication</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Teamwork</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Adaptability</strong><span class="lvl lvl-excellent">Excellent</span><i class="bar" style="--w:95%"></i></li><li><strong>Accounting</strong><span class="lvl lvl-basic">Basic</span><i class="bar" style="--w:35%"></i></li></ul></div>
         </div>
       </div>
     </section>
@@ -121,7 +135,7 @@
       <div class="projects">
         <article class="project reveal">
           <img src="./assets/FlappyBird.JPG" alt="Flappy Bird screenshot" loading="lazy" />
-          <div class="project-body"><h3>Flappy Bird</h3><p>Recreated the classic Flappy Bird game using JavaScript, HTML, and CSS. The game features smooth animations, collision detection, and score tracking.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/Flappy-Bird" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="https://flappybird.michaelfourie.co.za" target="_blank" rel="noopener">Play Game</a></div></div>
+          <div class="project-body"><h3>Flappy Bird</h3><p>Recreated the classic Flappy Bird game using JavaScript, HTML, and CSS. The game features smooth animations, collision detection, and score tracking.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/Flappy-Bird" target="_blank" rel="noopener">GitHub</a><button class="btn btn-primary demo" data-src="https://flappybird.michaelfourie.co.za" data-title="Flappy Bird">Try it here</button><a class="btn btn-ghost" href="https://flappybird.michaelfourie.co.za" target="_blank" rel="noopener">Open site</a></div></div>
         </article>
         <article class="project reveal">
           <img src="./assets/f1-highlights-pic.JPG" alt="F1 Highlights Archive screenshot" loading="lazy" />
@@ -129,7 +143,7 @@
         </article>
         <article class="project reveal">
           <img src="./assets/To-do%20List%20app.JPG" alt="To-Do List screenshot" loading="lazy" />
-          <div class="project-body"><h3>To-Do List</h3><p>Created a to-do list web app using JavaScript, HTML, and CSS. The app has funtionality to add your own tasks, tick them off and delete them.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/To-do-List" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="https://todolist.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+          <div class="project-body"><h3>To-Do List</h3><p>Created a to-do list web app using JavaScript, HTML, and CSS. The app has funtionality to add your own tasks, tick them off and delete them.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/To-do-List" target="_blank" rel="noopener">GitHub</a><button class="btn btn-primary demo" data-src="https://todolist.michaelfourie.co.za" data-title="To-Do List">Try it here</button><a class="btn btn-ghost" href="https://todolist.michaelfourie.co.za" target="_blank" rel="noopener">Open site</a></div></div>
         </article>
         <article class="project reveal">
           <img src="./assets/bearridge.JPG" alt="Company Website screenshot" loading="lazy" />
@@ -137,11 +151,11 @@
         </article>
         <article class="project reveal">
           <img src="./assets/dice.JPG" alt="Dice Decider screenshot" loading="lazy" />
-          <div class="project-body"><h3>Dice Decider</h3><p>Created a dice decider web app using JavaScript, HTML, and CSS. The app has funtionality to roll the dice and display the result.</p><div class="links"><a class="btn btn-primary" href="https://dice.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+          <div class="project-body"><h3>Dice Decider</h3><p>Created a dice decider web app using JavaScript, HTML, and CSS. The app has funtionality to roll the dice and display the result.</p><div class="links"><button class="btn btn-primary demo" data-src="https://dice.michaelfourie.co.za" data-title="Dice Decider">Try it here</button><a class="btn btn-ghost" href="https://dice.michaelfourie.co.za" target="_blank" rel="noopener">Open site</a></div></div>
         </article>
         <article class="project reveal">
           <img src="./assets/drums.JPG" alt="Drum Kit screenshot" loading="lazy" />
-          <div class="project-body"><h3>Drum Kit</h3><p>Created a drum kit web app using JavaScript, HTML, and CSS. The app has funtionality to play the drums using the keyboard or mouse.</p><div class="links"><a class="btn btn-primary" href="https://drums.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+          <div class="project-body"><h3>Drum Kit</h3><p>Created a drum kit web app using JavaScript, HTML, and CSS. The app has funtionality to play the drums using the keyboard or mouse.</p><div class="links"><button class="btn btn-primary demo" data-src="https://drums.michaelfourie.co.za" data-title="Drum Kit">Try it here</button><a class="btn btn-ghost" href="https://drums.michaelfourie.co.za" target="_blank" rel="noopener">Open site</a></div></div>
         </article>
       </div>
     </section>
@@ -159,6 +173,15 @@
 
     <footer class="footer"><div class="container footer-inner"><p>Copyright &copy; <span id="year">2024</span> Michael Fourie. All Rights Reserved.</p><a href="#profile">Back to top ↑</a></div></footer>
 
+    <dialog id="demo-modal" aria-label="Project demo">
+      <div class="modal-bar"><strong id="demo-title"></strong><button id="demo-close" aria-label="Close">Close ✕</button></div>
+      <iframe id="demo-frame" title="Project demo" loading="lazy" allow="autoplay"></iframe>
+    </dialog>
+    <dialog id="palette" aria-label="Quick jump">
+      <input id="palette-input" type="text" placeholder="Jump to… (type to filter)" autocomplete="off" aria-label="Quick jump search" />
+      <ul id="palette-list"></ul>
+      <p class="palette-hint">↑ ↓ to move · Enter to go · Esc to close</p>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
