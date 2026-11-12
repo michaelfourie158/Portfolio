@@ -1,14 +1,3 @@
-<!-- 
-    This is the HTML file for Michael Fourie's portfolio website. 
-    It contains the structure and content of the website, including the navigation menu, profile section, about section, experience section, and skills section.
-    The file also includes links to external CSS and JavaScript files, as well as images used throughout the website.
-    Users can navigate through the different sections of the website using the navigation menu or by scrolling.
-    The profile section displays a profile picture, name, and a brief introduction.
-    The about section provides more information about Michael Fourie, including his experience, education, and skills.
-    The experience section showcases Michael's technical and personal skills.
-    This file is part of a larger project and should be viewed in a web browser to see the full website.
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,6 +13,7 @@
       name="keywords"
       content="Michael Fourie, Portfolio, Software Developer, Web Developer, HTML, CSS, JavaScript, South Africa"
     />
+    <meta name="theme-color" content="#0b1118" />
     <meta name="author" content="Michael Fourie" />
 
     <link
@@ -44,598 +34,131 @@
       href="./assets/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">My Portfolio</div>
-      <ul class="nav-links">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <nav id="hamburger-nav">
-      <div class="logo">Michael Fourie</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/profile-pic.png"
-          alt="Michael Fourie Profile Picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text_p1"><br />Hello, I'm</p>
-        <h1 class="title">Michael Fourie</h1>
-        <p class="section__text_p2">Future Software Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Michael-Fourie-Resume.pdf')"
-          >
-            Download CV
-          </button>
-
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn Profile"
-            class="icon"
-            onclick="window.open('https://www.linkedin.com/in/michaelfourie158/','_blank')"
-          />
-
-          <img
-            src="./assets/github.png"
-            alt="My GitHub Profile"
-            class="icon"
-            onclick="window.open('https://github.com/michaelfourie158','_blank')"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text_p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-pic">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile Picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p><br /><b>uTest</b></p>
-              <p>• Testing mobile, web, desktop applications.</p>
-              <p>Completed:</p>
-              <p>45 Test Cycles</p>
-              <p>22 Test Cases</p>
-              <p>34 Issues reported</p>
-              <p>
-                for 20 companies, including 3 Fortune 500 companies, and a
-                leading organisation in the motorsports industry.
-              </p>
-              <p><br /></p>
-
-              <p><b>NWU Student Assistant for 3 Modules</b></p>
-              <p>Tasks:</p>
-              <p>• Assisting students with practicals</p>
-              <p>• Marking assignments</p>
-              <p>• Invigilating Tests</p>
-              <p>• Assisting with lecturers where possible</p>
-
-              <p><br /><b>Innibos Ticket Sales Team for 2 years</b></p>
-              <p>Tasks:</p>
-              <p>• Selling tickets</p>
-              <p>• Using Computicket system (2023)</p>
-              <p>• Using TicketPro system (2024)</p>
-              <p>• Assisting with queries</p>
-
-              <p><br />(More details on my LinkedIn)</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p><br /><b>High School (NSC):</b></p>
-              <p><b>Hoerskool Nelspruit</b></p>
-              <p>• 4 Distinctions</p>
-              <p>• Afrikaans (Home Language): 73%</p>
-              <p>• English (FAL): 80%</p>
-              <p>• Mathematics: 77</p>
-              <p>• Computer Applications Technology (CAT): 88%</p>
-              <p>• Tourism: 90%</p>
-              <p>• Business Studies: 77%</p>
-              <p>• Life Orientation: 81%</p>
-
-              <p><br /><b>BSc Information Technology:</b></p>
-              <p><b>North West University</b></p>
-              <p>• Average: 77%</p>
-              <p>• Expected Graduation: December 2024</p>
-              <p>• Golden Key Award (Top 15% in my class)</p>
-              <p><br />(More details on my LinkedIn)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Currently completing my BSc Information Technology Degree hoping
-              to pursue a career in software development. I have a passion for
-              technology and the advancements made in technology. I am an
-              enthusiastic IT student with a passion for technology and the
-              advancements made in technology. I like solving problems. While
-              completing my BSc IT degree, I've gained experience working solo
-              and collaborating in groups with other students working on various
-              projects. <br /><br /><br /><br /><br /><br /><br />
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text_p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Technical Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MS Office</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="details-container">
-            <h2 class="experience-sub-title">Personal Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Problem Solving</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Quick Learner</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Communication</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Teamwork</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Adaptability</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience Icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Accounting</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-
-    <section id="projects">
-      <p class="section__text_p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/FlappyBird.JPG"
-                alt="Screenshot of Flappy Bird game"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Flappy Bird</h2>
-            <p>
-              Recreated the classic Flappy Bird game using JavaScript, HTML, and
-              CSS. The game features smooth animations, collision detection, and
-              score tracking.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/michaelfourie158/Flappy-Bird','_blank')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://flappybird.michaelfourie.co.za','_blank')"
-              >
-                Play Game
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/f1-highlights-pic.JPG"
-                alt="Screenhot of weather app"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              F1 Highlights Archive <br />
-            </h2>
-            <p>
-              Created an F1 Highlights website using HTML, CSS and JavaScript.
-              The app uses the Youtube Data API to get the race highlights for
-              the chosen race.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://f1.michaelfourie.co.za','_blank')"
-              >
-                Live Website
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/To-do List app.JPG"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">To-Do List</h2>
-            <p>
-              Created a to-do list web app using JavaScript, HTML, and CSS. The
-              app has funtionality to add your own tasks, tick them off and
-              delete them.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/michaelfourie158/To-do-List','_blank')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://todolist.michaelfourie.co.za','_blank')"
-              >
-                Live Website
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/bearridge.JPG"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Company Website</h2>
-            <p>
-              Created a website for Bear Ridge Holdings using HTML and CSS. The
-              website is fully responsive and showcases the company's services
-              and contact information.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/michaelfourie158/Bear-Ridge','_blank')"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://bearridgeholdings.co.za','_blank')"
-              >
-                Live Website
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/dice.JPG"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Dice Decider</h2>
-            <p>
-              Created a dice decider web app using JavaScript, HTML, and CSS.
-              The app has funtionality to roll the dice and display the
-              result.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://dice.michaelfourie.co.za','_blank')"
-              >
-                Live Website
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/drums.JPG"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Drum Kit</h2>
-            <p>
-              Created a drum kit web app using JavaScript, HTML, and CSS. The
-              app has funtionality to play the drums using the keyboard or
-              mouse.<br /><br />
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://drums.michaelfourie.co.za','_blank')"
-              >
-                Live Website
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text_p1">Get In Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email Icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:michaelfourie115588@gmail.com">
-              michaelfourie115588@gmail.com</a
-            >
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn Icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a
-              href="https://www.linkedin.com/in/michaelfourie158/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a href="#profile" class="brand"><span class="brand-mark">MF</span>Michael Fourie</a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
       </nav>
-      <p>Copyright &#169; 2024 Michael Fourie. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    </header>
+
+    <section id="profile" class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Michael <em>Fourie</em></h1>
+        <p class="role">Future Software Developer</p>
+        <p class="lead">BSc Information Technology student who loves solving problems and building things for the web.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./assets/Michael-Fourie-Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn btn-ghost" href="#contact">Contact Info</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/michaelfourie158/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.75 9.75h3.8v1.6h.06c.53-1 1.82-2.06 3.75-2.06 4 0 4.74 2.6 4.74 6V21h-4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V21h-4z"/></svg></a>
+          <a href="https://github.com/michaelfourie158" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.9 1.52 2.35 1.08 2.92.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-pic"><img src="./assets/profile-pic.png" alt="Michael Fourie" /></div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-head reveal"><p class="eyebrow">Get to know more</p><h2>About Me</h2></div>
+      <div class="about-top reveal">
+        <img class="about-pic" src="./assets/about-pic.png" alt="Michael Fourie" loading="lazy" />
+        <p>Currently completing my BSc Information Technology Degree hoping to pursue a career in software development. I have a passion for technology and the advancements made in technology. I am an enthusiastic IT student with a passion for technology and the advancements made in technology. I like solving problems. While completing my BSc IT degree, I've gained experience working solo and collaborating in groups with other students working on various projects.</p>
+      </div>
+      <div class="two-col">
+        <div class="panel reveal">
+          <h3>Experience</h3>
+          <h4>uTest</h4>
+          <ul><li>Testing mobile, web, desktop applications.</li><li>Completed 45 test cycles, 22 test cases and 34 issues reported for 20 companies, including 3 Fortune 500 companies, and a leading organisation in the motorsports industry.</li></ul>
+          <h4>NWU Student Assistant for 3 Modules</h4>
+          <ul><li>Assisting students with practicals</li><li>Marking assignments</li><li>Invigilating tests</li><li>Assisting with lectures where possible</li></ul>
+          <h4>Innibos Ticket Sales Team for 2 years</h4>
+          <ul><li>Selling tickets</li><li>Using Computicket system (2023)</li><li>Using TicketPro system (2024)</li><li>Assisting with queries</li></ul>
+          <p class="note">More details on my <a href="https://www.linkedin.com/in/michaelfourie158/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </div>
+        <div class="panel reveal">
+          <h3>Education</h3>
+          <h4>High School (NSC): Hoerskool Nelspruit</h4>
+          <ul><li>4 Distinctions</li><li>Afrikaans (Home Language): 73%</li><li>English (FAL): 80%</li><li>Mathematics: 77%</li><li>Computer Applications Technology (CAT): 88%</li><li>Tourism: 90%</li><li>Business Studies: 77%</li><li>Life Orientation: 81%</li></ul>
+          <h4>BSc Information Technology: North West University</h4>
+          <ul><li>Average: 77%</li><li>Expected Graduation: December 2024</li><li>Golden Key Award (Top 15% in my class)</li></ul>
+          <p class="note">More details on my <a href="https://www.linkedin.com/in/michaelfourie158/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section band">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">Explore my</p><h2>Skills</h2></div>
+        <div class="two-col">
+          <div class="panel reveal"><h3>Technical Skills</h3><ul class="skills"><li><strong>HTML</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>JavaScript</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>CSS</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>C#</strong><span class="lvl lvl-intermediate">Intermediate</span></li><li><strong>C++</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>Java</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>React</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>Python</strong><span class="lvl lvl-basic">Basic</span></li><li><strong>MS Office</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Github</strong><span class="lvl lvl-intermediate">Intermediate</span></li></ul></div>
+          <div class="panel reveal"><h3>Personal Skills</h3><ul class="skills"><li><strong>Problem Solving</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Quick Learner</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Communication</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Teamwork</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Adaptability</strong><span class="lvl lvl-excellent">Excellent</span></li><li><strong>Accounting</strong><span class="lvl lvl-basic">Basic</span></li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-head reveal"><p class="eyebrow">Browse my recent</p><h2>Projects</h2></div>
+      <div class="projects">
+        <article class="project reveal">
+          <img src="./assets/FlappyBird.JPG" alt="Flappy Bird screenshot" loading="lazy" />
+          <div class="project-body"><h3>Flappy Bird</h3><p>Recreated the classic Flappy Bird game using JavaScript, HTML, and CSS. The game features smooth animations, collision detection, and score tracking.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/Flappy-Bird" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="https://flappybird.michaelfourie.co.za" target="_blank" rel="noopener">Play Game</a></div></div>
+        </article>
+        <article class="project reveal">
+          <img src="./assets/f1-highlights-pic.JPG" alt="F1 Highlights Archive screenshot" loading="lazy" />
+          <div class="project-body"><h3>F1 Highlights Archive</h3><p>Created an F1 Highlights website using HTML, CSS and JavaScript. The app uses the Youtube Data API to get the race highlights for the chosen race.</p><div class="links"><a class="btn btn-primary" href="https://f1.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+        </article>
+        <article class="project reveal">
+          <img src="./assets/To-do%20List%20app.JPG" alt="To-Do List screenshot" loading="lazy" />
+          <div class="project-body"><h3>To-Do List</h3><p>Created a to-do list web app using JavaScript, HTML, and CSS. The app has funtionality to add your own tasks, tick them off and delete them.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/To-do-List" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="https://todolist.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+        </article>
+        <article class="project reveal">
+          <img src="./assets/bearridge.JPG" alt="Company Website screenshot" loading="lazy" />
+          <div class="project-body"><h3>Company Website</h3><p>Created a website for Bear Ridge Holdings using HTML and CSS. The website is fully responsive and showcases the company's services and contact information.</p><div class="links"><a class="btn btn-ghost" href="https://github.com/michaelfourie158/Bear-Ridge" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="https://bearridgeholdings.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+        </article>
+        <article class="project reveal">
+          <img src="./assets/dice.JPG" alt="Dice Decider screenshot" loading="lazy" />
+          <div class="project-body"><h3>Dice Decider</h3><p>Created a dice decider web app using JavaScript, HTML, and CSS. The app has funtionality to roll the dice and display the result.</p><div class="links"><a class="btn btn-primary" href="https://dice.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+        </article>
+        <article class="project reveal">
+          <img src="./assets/drums.JPG" alt="Drum Kit screenshot" loading="lazy" />
+          <div class="project-body"><h3>Drum Kit</h3><p>Created a drum kit web app using JavaScript, HTML, and CSS. The app has funtionality to play the drums using the keyboard or mouse.</p><div class="links"><a class="btn btn-primary" href="https://drums.michaelfourie.co.za" target="_blank" rel="noopener">Live Website</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="contact reveal">
+        <div><p class="eyebrow">Get in touch</p><h2>Contact Me</h2><p>Open to opportunities and collaborations. Reach out any time.</p></div>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:michaelfourie115588@gmail.com">michaelfourie115588@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/michaelfourie158/" target="_blank" rel="noopener">linkedin.com/in/michaelfourie158</a></li>
+          <li><span>GitHub</span><a href="https://github.com/michaelfourie158" target="_blank" rel="noopener">github.com/michaelfourie158</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer"><div class="container footer-inner"><p>Copyright &copy; <span id="year">2024</span> Michael Fourie. All Rights Reserved.</p><a href="#profile">Back to top ↑</a></div></footer>
+
+    <script>
+      const btn = document.querySelector(".menu-btn"), links = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => btn.setAttribute("aria-expanded", links.classList.toggle("open")));
+      links.addEventListener("click", (e) => { if (e.target.tagName === "A") { links.classList.remove("open"); btn.setAttribute("aria-expanded", false); } });
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.1 });
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
   </body>
 </html>
