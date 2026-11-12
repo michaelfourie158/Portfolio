@@ -74,6 +74,7 @@ if (!reduce && matchMedia("(pointer: fine)").matches) {
 /* demo modal */
 const modal = $("#demo-modal"), frame = $("#demo-frame");
 $$(".demo").forEach((b) => b.addEventListener("click", () => {
+  if (typeof modal.showModal !== "function") { window.open(b.dataset.src, "_blank", "noopener"); return; }
   $("#demo-title").textContent = b.dataset.title;
   frame.src = b.dataset.src;
   modal.showModal();
