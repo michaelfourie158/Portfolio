@@ -159,13 +159,6 @@
 
     <footer class="footer"><div class="container footer-inner"><p>Copyright &copy; <span id="year">2024</span> Michael Fourie. All Rights Reserved.</p><a href="#profile">Back to top ↑</a></div></footer>
 
-    <script>
-      const btn = document.querySelector(".menu-btn"), links = document.querySelector(".nav-links");
-      btn.addEventListener("click", () => btn.setAttribute("aria-expanded", links.classList.toggle("open")));
-      links.addEventListener("click", (e) => { if (e.target.tagName === "A") { links.classList.remove("open"); btn.setAttribute("aria-expanded", false); } });
-      document.getElementById("year").textContent = new Date().getFullYear();
-      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.1 });
-      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
