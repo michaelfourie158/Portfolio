@@ -94,6 +94,8 @@ h1, h2, h3, .brand { font-family: "Sora", "Inter", sans-serif; line-height: 1.15
 .panel h4 { font-size: 1rem; color: var(--accent-2); margin: 1.2rem 0 .4rem; font-family: "Inter", sans-serif; }
 .panel ul:not(.skills) { padding-left: 1.2rem; list-style: disc; color: #c0cad6; font-size: .95rem; }
 .panel li::marker { color: var(--accent); }
+.meta { color: var(--muted); font-size: .85rem; margin: -.2rem 0 .4rem; }
+.panel h4 small { display: block; color: var(--muted); font-weight: 500; font-size: .8rem; margin-top: 2px; }
 .note { margin-top: 1.4rem; color: var(--muted); font-size: .9rem; }
 .note a { color: var(--accent); }
 .skills { list-style: none !important; padding: 0 !important; display: grid; gap: 10px; }
