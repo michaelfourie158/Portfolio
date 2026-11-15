@@ -54,12 +54,11 @@ ul, ol { list-style: none; }
 .nav-links a[aria-current] { border-bottom: 2px solid var(--accent); }
 .nav-cta {
   font-weight: 600; font-size: 1rem;
-  background: var(--ink); color: var(--paper) !important;
   border: 1px solid var(--ink); border-radius: 4px;
-  padding: 14px 42px;
-  transition: background .18s ease, transform .18s ease;
+  padding: 14px 30px; color: var(--ink) !important;
+  transition: background .18s ease, color .18s ease;
 }
-.nav-cta:hover { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-1px); }
+.nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
 .menu-btn { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; margin-left: auto; }
 .menu-btn span { position: absolute; left: 9px; right: 9px; height: 2px; background: var(--ink); }
 .menu-btn span:first-child { top: 15px; }
