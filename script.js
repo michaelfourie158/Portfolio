@@ -49,12 +49,20 @@ else {
   })();
 }
 
-/* cursor glow in hero */
+/* cursor glow in hero — layer stretched to the viewport so the circle never clips */
 const hero = $("#profile");
+const glow = $(".glow");
+function fitGlow() {
+  const r = hero.getBoundingClientRect();
+  glow.style.left = (-r.left) + "px";
+  glow.style.width = window.innerWidth + "px";
+}
+fitGlow();
+window.addEventListener("resize", fitGlow);
 if (!reduce && matchMedia("(pointer: fine)").matches) {
   hero.addEventListener("pointermove", (e) => {
     const r = hero.getBoundingClientRect();
-    hero.style.setProperty("--mx", e.clientX - r.left + "px");
+    hero.style.setProperty("--mx", e.clientX + "px");
     hero.style.setProperty("--my", e.clientY - r.top + "px");
   });
 }
@@ -84,40 +92,4 @@ $("#demo-close").addEventListener("click", closeDemo);
 modal.addEventListener("click", (e) => { if (e.target === modal) closeDemo(); });
 modal.addEventListener("cancel", () => (frame.src = "about:blank"));
 
-/* quick jump palette */
-const pal = $("#palette"), input = $("#palette-input"), list = $("#palette-list");
-const items = [
-  ["About", "#about"], ["Skills", "#experience"], ["Projects", "#projects"], ["Contact", "#contact"],
-  ["Download CV", "./assets/Michael-Fourie-CV.pdf", true], ["GitHub", "https://github.com/michaelfourie158", true],
-  ["LinkedIn", "https://www.linkedin.com/in/michaelfourie158/", true], ["Send an email", "mailto:michaelfourie115588@gmail.com"],
-];
-let sel = 0, shown = items;
-function render() {
-  const q = input.value.trim().toLowerCase();
-  shown = items.filter((i) => i[0].toLowerCase().includes(q));
-  sel = Math.min(sel, Math.max(shown.length - 1, 0));
-  list.innerHTML = shown.map((i, n) => `<li class="${n === sel ? "sel" : ""}" data-n="${n}">${i[0]}</li>`).join("") || "<li>No matches</li>";
-}
-function go(i) {
-  if (!i) return;
-  pal.close();
-  if (i[2]) window.open(i[1], "_blank", "noopener");
-  else if (i[1].startsWith("#")) { location.hash = i[1]; }
-  else location.href = i[1];
-}
-function openPalette() { input.value = ""; sel = 0; render(); pal.showModal(); input.focus(); }
-$("#open-palette").addEventListener("click", openPalette);
-document.addEventListener("keydown", (e) => {
-  const typing = /input|textarea/i.test(document.activeElement.tagName);
-  if ((e.key === "/" && !typing && !pal.open && !modal.open) || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k")) {
-    e.preventDefault(); openPalette();
-  }
-});
-input.addEventListener("input", () => { sel = 0; render(); });
-input.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowDown") { sel = (sel + 1) % Math.max(shown.length, 1); render(); e.preventDefault(); }
-  else if (e.key === "ArrowUp") { sel = (sel - 1 + shown.length) % Math.max(shown.length, 1); render(); e.preventDefault(); }
-  else if (e.key === "Enter") go(shown[sel]);
-});
-list.addEventListener("click", (e) => { const li = e.target.closest("li[data-n]"); if (li) go(shown[+li.dataset.n]); });
-pal.addEventListener("click", (e) => { if (e.target === pal) pal.close(); });
+/* quick jump palette removed 2026-11-15 */
