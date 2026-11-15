@@ -55,9 +55,10 @@ ul, ol { list-style: none; }
 .nav-cta {
   font-weight: 600; font-size: 1rem;
   border: 1px solid var(--ink); border-radius: 4px;
-  padding: 14px 26px; color: var(--ink) !important;
+  padding: 14px 34px; color: var(--ink) !important;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
 }
-.nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
+.nav-cta:hover { background: var(--ink); color: var(--paper) !important; transform: translateY(-1px); }
 .menu-btn { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; margin-left: auto; }
 .menu-btn span { position: absolute; left: 9px; right: 9px; height: 2px; background: var(--ink); }
 .menu-btn span:first-child { top: 15px; }
