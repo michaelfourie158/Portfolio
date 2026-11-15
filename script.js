@@ -49,21 +49,12 @@ else {
   })();
 }
 
-/* cursor glow in hero — layer stretched to the viewport so the circle never clips */
-const hero = $("#profile");
+/* cursor glow — fixed layer covering the whole viewport so it follows on every section */
 const glow = $(".glow");
-function fitGlow() {
-  const r = hero.getBoundingClientRect();
-  glow.style.left = (-r.left) + "px";
-  glow.style.width = window.innerWidth + "px";
-}
-fitGlow();
-window.addEventListener("resize", fitGlow);
 if (!reduce && matchMedia("(pointer: fine)").matches) {
-  hero.addEventListener("pointermove", (e) => {
-    const r = hero.getBoundingClientRect();
-    hero.style.setProperty("--mx", e.clientX + "px");
-    hero.style.setProperty("--my", e.clientY - r.top + "px");
+  window.addEventListener("pointermove", (e) => {
+    glow.style.setProperty("--mx", e.clientX + "px");
+    glow.style.setProperty("--my", e.clientY + "px");
   });
 }
 
