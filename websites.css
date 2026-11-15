@@ -59,7 +59,7 @@
 .pkg--featured { border-color: rgba(245, 165, 36, 0.55); box-shadow: 0 0 0 1px rgba(245, 165, 36, 0.25) inset; }
 .pkg h3 { font-size: 1.2rem; }
 .pkg .price { font: 700 2rem/1 "Sora", sans-serif; color: var(--accent-2); }
-.pkg .was { color: var(--muted); font-size: 0.85rem; text-decoration: line-through; margin-left: 8px; font-weight: 400; }
+.pkg .unit { color: var(--muted); font-size: 0.85rem; margin-left: 8px; font-weight: 400; }
 .pkg ul { display: grid; gap: 8px; color: #c0cad6; font-size: 0.95rem; }
 .pkg li { padding-left: 22px; position: relative; }
 .pkg li::before {
