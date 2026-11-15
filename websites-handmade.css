@@ -1,0 +1,167 @@
+/* Handmade overrides — layers on top of websites.css and style.css */
+
+:root {
+  --bg: #f7f3ea;
+  --bg-2: #eee9dc;
+  --card: #fffef8;
+  --line: rgba(44, 36, 22, 0.18);
+  --text: #2c2416;
+  --muted: #5e5444;
+  --accent: #d97634;
+  --accent-2: #b85c28;
+  --radius: 14px;
+}
+
+/* Warm paper background with a faint fibre texture */
+body {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(217, 118, 52, 0.08), transparent 40%),
+    radial-gradient(ellipse at 80% 60%, rgba(184, 92, 40, 0.06), transparent 35%),
+    var(--bg);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Patrick Hand", "Comic Sans MS", system-ui, -apple-system, sans-serif;
+}
+
+/* Handwritten headings */
+h1, h2, h3, .brand, .eyebrow, .price-badge b, .pkg .price {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Hand-drawn card: irregular border-radius, warm paper, subtle tilt */
+.pkg, .pkg--featured, .step, .qr-block, .cta-panel, .project, .trust div, .faq details {
+  background: var(--card);
+  border: 2.5px solid var(--text);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 5px 0 rgba(44, 36, 22, 0.15);
+  transform: rotate(-0.6deg);
+}
+.pkg:nth-child(2), .faq details:nth-child(2n), .step:nth-child(2) { transform: rotate(0.7deg); }
+.pkg:nth-child(3), .faq details:nth-child(3n), .step:nth-child(3) { transform: rotate(-0.4deg); }
+
+.pkg--featured {
+  background: #fff8ee;
+  border-color: #d97634;
+  box-shadow: 5px 6px 0 rgba(217, 118, 52, 0.35);
+  transform: rotate(0.5deg);
+}
+
+/* Buttons: hand-cut look */
+.btn {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: 2px solid var(--text);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 3px 4px 0 rgba(44, 36, 22, 0.22);
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: #2c2416;
+  color: #fff8ee;
+  box-shadow: 3px 4px 0 rgba(44, 36, 22, 0.3);
+}
+.btn-ghost {
+  background: transparent;
+  border-style: dashed;
+  color: var(--text);
+}
+
+/* Nav */
+.site-header {
+  background: rgba(247, 243, 234, 0.92);
+  border-bottom: 2px dashed var(--text);
+  backdrop-filter: none;
+}
+.nav-cta {
+  background: var(--accent);
+  color: #fff8ee !important;
+  border: 2px solid var(--text);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+/* Hero */
+.page-hero h1 em {
+  font-style: normal;
+  text-decoration: underline wavy var(--accent) 3px;
+  text-underline-offset: 6px;
+}
+.price-badge {
+  background: #fff8ee;
+  border: 2.5px dashed var(--accent);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 3px 4px 0 rgba(44, 36, 22, 0.12);
+}
+.price-badge b { color: var(--accent-2); }
+
+/* Trust cards */
+.trust div {
+  background: var(--card);
+  border: 2px dashed var(--text);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+/* Projects: polaroid-like */
+.project {
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+  background: #fffef8;
+  border: 2.5px solid var(--text);
+  box-shadow: 6px 6px 0 rgba(44, 36, 22, 0.18);
+  transform: rotate(0.7deg);
+  overflow: hidden;
+}
+.project:nth-child(2) { transform: rotate(-0.7deg); }
+.project img {
+  border-bottom: 2.5px solid var(--text);
+  filter: sepia(0.18) saturate(0.92);
+}
+
+/* FAQ */
+.faq details[open] summary { border-bottom: 2px dashed var(--text); padding-bottom: 12px; }
+.faq summary { font-family: "Patrick Hand", cursive; font-weight: 400; }
+.faq p { color: #4a4030; font-family: "Georgia", serif; }
+
+/* Section heads: hand-drawn underline */
+.section-head h2 {
+  display: inline-block;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 6px;
+}
+
+/* Dashed rules instead of hard borders */
+.band { background: var(--bg-2); border-block: 2px dashed var(--text); }
+.footer { border-top: 2px dashed var(--text); color: #4a4030; }
+
+/* QR block */
+.qr-block {
+  background: #fff8ee;
+  border: 2.5px solid var(--text);
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+}
+.qr-figure {
+  background: #fffef8;
+  border: 2px dashed var(--text);
+  border-radius: 15px;
+  transform: rotate(-2deg);
+}
+
+/* Steps: numbered circles look hand-stamped */
+.step::before {
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff8ee;
+  border: 2px solid var(--text);
+}
+
+/* Links */
+a { text-decoration: underline wavy var(--accent) 1.5px; text-underline-offset: 4px; }
+nav a, .btn, .links a { text-decoration: none; }
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .trust div, .pkg, .project { transform: none; }
+}
