@@ -104,7 +104,7 @@ h1, h2, h3, .brand { font-family: "Sora", "Inter", sans-serif; line-height: 1.15
 .lvl-excellent { background: rgba(245,165,36,.18); color: var(--accent-2); }
 .lvl-intermediate { background: rgba(120,180,255,.15); color: #9cc7ff; }
 
-.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 24px; }
 .project { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, border-color .25s; }
 .project:hover { transform: translateY(-5px); border-color: rgba(245,165,36,.5); }
 .project img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-bottom: 1px solid var(--line); }
