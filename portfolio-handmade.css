@@ -1,6 +1,7 @@
 /* Portfolio, hand-set — editorial paper/ink. Coded by hand, not generated. */
 
 :root {
+  color-scheme: light;
   --paper: #f6f4ee;
   --ink: #1c1a17;
   --muted: #6f6a5e;
@@ -52,14 +53,14 @@ ul, ol { list-style: none; }
 .nav-links a { color: var(--muted); padding: 13px 0; }
 .nav-links a:hover, .nav-links a[aria-current] { color: var(--ink); }
 .nav-links a[aria-current] { border-bottom: 2px solid var(--accent); }
-.nav-cta {
-  font-weight: 600; font-size: 1rem;
+.nav-links .nav-cta {
+  font-weight: 600; font-size: 0.95rem; line-height: 1;
   border: 1px solid var(--ink); border-radius: 4px;
-  padding: 14px 30px; color: var(--ink) !important;
+  padding: 11px 22px; color: var(--ink) !important;
   transition: background .18s ease, color .18s ease;
 }
-.nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
-.menu-btn { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; margin-left: auto; }
+.nav-links .nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
+.menu-btn { display: none; background: none; border: 0; width: 44px; height: 44px; cursor: pointer; position: relative; margin-left: auto; }
 .menu-btn span { position: absolute; left: 9px; right: 9px; height: 2px; background: var(--ink); }
 .menu-btn span:first-child { top: 15px; }
 .menu-btn span:last-child { top: 23px; }
@@ -67,8 +68,7 @@ ul, ol { list-style: none; }
 /* ---------- Sections ---------- */
 .section { padding: 72px 0; width: min(1120px, 100% - 48px); margin-inline: auto; }
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
-.section-head { display: grid; grid-template-columns: auto 1fr; gap: 14px 26px; align-items: baseline; margin-bottom: 30px; }
-.section-no { font-family: "Fraunces", serif; font-size: 0.85rem; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; padding-top: 6px; }
+.section-head { margin-bottom: 30px; }
 .section h2 { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(1.6rem, 3.6vw, 2.5rem); letter-spacing: -0.015em; line-height: 1.1; }
 .section-sub { grid-column: 2; color: var(--muted); font-size: 0.98rem; margin-top: 6px; }
 .eyebrow {
@@ -249,7 +249,6 @@ ul, ol { list-style: none; }
 }
 @media (max-width: 860px) {
   .menu-btn { display: block; }
-  .nav-cta { display: none; }
   .nav { flex-wrap: wrap; height: 60px; row-gap: 0; }
   .nav-links {
     display: none; order: 3; width: 100%; flex-direction: column; gap: 0;
@@ -257,4 +256,6 @@ ul, ol { list-style: none; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 4px; }
+  .nav-links .nav-cta { border: 0; border-radius: 0; font-size: inherit; line-height: inherit; padding: 12px 4px; }
+  .nav-links .nav-cta:hover { background: none; color: var(--ink) !important; }
 }
