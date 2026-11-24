@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /draft/
 
 Sitemap: https://michaelfourie.co.za/sitemap.xml
