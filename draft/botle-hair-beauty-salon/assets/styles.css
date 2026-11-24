@@ -65,8 +65,8 @@ h3{margin:0 0 6px;font-size:1.1rem}
 .rows h3{margin:0}.rows p{margin:0;color:var(--muted)}
 @media(min-width:760px){.about--flip>:first-child{order:2}}
 /* ---------- design variants ---------- */
-.style-bold{--r:0;--rb:0;--hfont:Impact,"Arial Narrow Bold","Helvetica Neue",Arial,sans-serif;--tint:#e9e6df}
-.style-bold h1,.style-bold h2{text-transform:uppercase;letter-spacing:.01em;font-weight:900}
+.style-bold{--r:0;--rb:0;--hfont:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--tint:#e9e6df}
+.style-bold h1,.style-bold h2{text-transform:uppercase;letter-spacing:.01em;font-weight:800;line-height:1.05}
 .style-bold .site-header{background:var(--navy);border-bottom:5px solid var(--accent)}
 .style-bold .brand,.style-bold .nav a{color:#fff}.style-bold .brand span[style]{color:#cdd6de!important}
 .style-bold .nav a[aria-current],.style-bold .nav a:hover{color:#f4b183}
